@@ -1,2 +1,6 @@
 res://scenes/level_1.tscn
+res://scenes/player.tscn
+res://scenes/level_2.tscn
+res://scripts/collectibles.gd
+res://scenes/collectibles.tscn
 res://scripts/player.gd
