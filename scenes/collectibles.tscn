@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://m24sv1kh6io0"]
+
+[ext_resource type="Script" path="res://scripts/collectibles.gd" id="1_41vi6"]
+[ext_resource type="Texture2D" uid="uid://btpmwdx7vev8w" path="res://assets/apple.png" id="2_l5km3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go45c"]
+atlas = ExtResource("2_l5km3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c362u"]
+radius = 7.0
+
+[sub_resource type="Animation" id="Animation_o65kf"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3.515), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3.515), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n21kx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -3.515)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -3.515)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wmaii"]
+_data = {
+"RESET": SubResource("Animation_n21kx"),
+"idle": SubResource("Animation_o65kf")
+}
+
+[node name="collectibles" type="Area2D"]
+script = ExtResource("1_41vi6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3.515)
+texture = SubResource("AtlasTexture_go45c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.515)
+shape = SubResource("CircleShape2D_c362u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wmaii")
+}
+autoplay = "idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

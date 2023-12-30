@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dt0dwvewdw4sh"]
+[gd_scene load_steps=13 format=3 uid="uid://dt0dwvewdw4sh"]
 
 [ext_resource type="Texture2D" uid="uid://beyl2u8vw437e" path="res://assets/tileset.png" id="1_bv1pp"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_xljut"]
 [ext_resource type="PackedScene" uid="uid://ctm2jm42d710t" path="res://scenes/player.tscn" id="3_5fae2"]
 [ext_resource type="Texture2D" uid="uid://4xn0vb70un3" path="res://assets/start.png" id="3_hs0fp"]
 [ext_resource type="Texture2D" uid="uid://btpmwdx7vev8w" path="res://assets/apple.png" id="4_rln7r"]
+[ext_resource type="PackedScene" uid="uid://m24sv1kh6io0" path="res://scenes/collectibles.tscn" id="6_ssyuw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6x5gm"]
 texture = ExtResource("1_bv1pp")
@@ -809,6 +810,18 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next_level_trigger"]
 shape = SubResource("CircleShape2D_tl3va")
+
+[node name="collectibles" parent="." instance=ExtResource("6_ssyuw")]
+position = Vector2(176, -17)
+
+[node name="collectibles2" parent="." instance=ExtResource("6_ssyuw")]
+position = Vector2(203, -9)
+
+[node name="collectibles3" parent="." instance=ExtResource("6_ssyuw")]
+position = Vector2(332, -92)
+
+[node name="collectibles4" parent="." instance=ExtResource("6_ssyuw")]
+position = Vector2(614, -56)
 
 [connection signal="body_entered" from="death_area" to="." method="_on_death_area_body_entered"]
 [connection signal="body_entered" from="next_level_trigger" to="." method="_on_next_level_trigger_body_entered"]
