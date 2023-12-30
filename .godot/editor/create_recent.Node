@@ -1,2 +1,6 @@
+CollisionShape2D
+ColorRect
+CharacterBody2D
+Node2D
 Camera2D
 TileMap
