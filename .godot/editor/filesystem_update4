@@ -1,6 +1,12 @@
 res://scenes/level_1.tscn
 res://scenes/player.tscn
 res://scenes/level_2.tscn
-res://scripts/collectibles.gd
-res://scenes/collectibles.tscn
+res://scenes/main.tscn
+res://scenes/moving_platform.tscn
+res://scenes/elevator_platform.tscn
+res://scenes/sliding_platform.tscn
+res://scenes/elevator_platform_down.tscn
+res://scenes/elevator_platform_up.tscn
+res://scenes/main.gd
+res://scenes/death_area.tscn
 res://scripts/player.gd
