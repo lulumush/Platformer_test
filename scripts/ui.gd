@@ -13,6 +13,10 @@ func _ready():
 func _process(delta):
 	var elapsed_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
 	timer.text = "Time: " + str(elapsed_time)
+	#var elapsed_time = Time.get_ticks_msec() - level_start_time
+	#var minutes = elapsed_time / 60000
+	#var seconds = (elapsed_time % 60000) / 1000.0
+	#timer.text = "Temps: %02d:%02.f" % [minutes, seconds]
 
 func apple_added(apple_amount):
 	apple_counter.text = "Apple amount: " + str(apple_amount)

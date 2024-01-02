@@ -8,8 +8,6 @@ func _on_body_entered(body):
 		GlobalScript.add_apple(1)
 		collectible_sound.play()
 		sprite_2d.hide()
-		
-
 
 func _on_collectible_sound_finished():
 	queue_free()

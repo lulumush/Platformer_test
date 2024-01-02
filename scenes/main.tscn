@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bg2rrh8gd6r4m"]
+[gd_scene load_steps=16 format=3 uid="uid://bg2rrh8gd6r4m"]
 
 [ext_resource type="Texture2D" uid="uid://ddkt4dcjy10xl" path="res://assets/Brown.png" id="1_6ndth"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_gpow6"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://xsscf23y5e2n" path="res://scenes/death_area.tscn" id="7_1uoek"]
 [ext_resource type="PackedScene" uid="uid://m24sv1kh6io0" path="res://scenes/collectibles.tscn" id="7_oqnmn"]
 [ext_resource type="PackedScene" uid="uid://c4ggcpryiem0n" path="res://scenes/ui.tscn" id="8_7dkpu"]
+[ext_resource type="PackedScene" uid="uid://djka7a5srmns2" path="res://scenes/next_level_trigger.tscn" id="9_ukdc3"]
+[ext_resource type="AudioStream" uid="uid://dyl04vkec35oj" path="res://assets/game_over.mp3" id="10_7xuwh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4u02n"]
 texture = ExtResource("2_51fmr")
@@ -574,18 +576,24 @@ position = Vector2(390, 453)
 
 [node name="ui" parent="." instance=ExtResource("8_7dkpu")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="scene_border_bounds" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scene_border_bounds"]
 position = Vector2(-10, 328)
 shape = SubResource("RectangleShape2D_wq41f")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="scene_border_bounds"]
 position = Vector2(568, -10)
 shape = SubResource("RectangleShape2D_dqswe")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="scene_border_bounds"]
 position = Vector2(1162, 315.25)
 shape = SubResource("RectangleShape2D_uyjky")
 
-[connection signal="body_entered" from="death_area" to="." method="_on_death_area_body_entered"]
+[node name="next_level_trigger" parent="." instance=ExtResource("9_ukdc3")]
+position = Vector2(260, 256)
+
+[node name="game_over_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_7xuwh")
+
+[connection signal="body_entered" from="next_level_trigger" to="." method="_on_next_level_trigger_body_entered"]
