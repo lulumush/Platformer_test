@@ -6,3 +6,5 @@ func _on_death_area_body_entered(body):
 		
 func reset_level():
 	get_tree().reload_current_scene()
+
+	

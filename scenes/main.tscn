@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bg2rrh8gd6r4m"]
+[gd_scene load_steps=11 format=3 uid="uid://bg2rrh8gd6r4m"]
 
 [ext_resource type="Texture2D" uid="uid://ddkt4dcjy10xl" path="res://assets/Brown.png" id="1_6ndth"]
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_gpow6"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_gpow6"]
 [ext_resource type="Texture2D" uid="uid://beyl2u8vw437e" path="res://assets/tileset.png" id="2_51fmr"]
 [ext_resource type="PackedScene" uid="uid://dsyf7iiyqpoov" path="res://scenes/sliding_platform.tscn" id="3_26qi1"]
 [ext_resource type="PackedScene" uid="uid://ctm2jm42d710t" path="res://scenes/player.tscn" id="3_wqgp1"]
 [ext_resource type="PackedScene" uid="uid://xsscf23y5e2n" path="res://scenes/death_area.tscn" id="7_1uoek"]
+[ext_resource type="PackedScene" uid="uid://m24sv1kh6io0" path="res://scenes/collectibles.tscn" id="7_oqnmn"]
+[ext_resource type="PackedScene" uid="uid://c4ggcpryiem0n" path="res://scenes/ui.tscn" id="8_7dkpu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4u02n"]
 texture = ExtResource("2_51fmr")
@@ -538,5 +540,28 @@ position = Vector2(9, 653)
 
 [node name="moving_platform" parent="." instance=ExtResource("3_26qi1")]
 position = Vector2(136, 500)
+
+[node name="collectibles" parent="." instance=ExtResource("7_oqnmn")]
+position = Vector2(558, 534)
+
+[node name="collectibles7" parent="." instance=ExtResource("7_oqnmn")]
+position = Vector2(606, 470)
+
+[node name="collectibles2" parent="." instance=ExtResource("7_oqnmn")]
+position = Vector2(292, 477)
+
+[node name="collectibles6" parent="." instance=ExtResource("7_oqnmn")]
+position = Vector2(422, 477)
+
+[node name="collectibles3" parent="." instance=ExtResource("7_oqnmn")]
+position = Vector2(326, 453)
+
+[node name="collectibles4" parent="." instance=ExtResource("7_oqnmn")]
+position = Vector2(357, 442)
+
+[node name="collectibles5" parent="." instance=ExtResource("7_oqnmn")]
+position = Vector2(390, 453)
+
+[node name="ui" parent="." instance=ExtResource("8_7dkpu")]
 
 [connection signal="body_entered" from="death_area" to="." method="_on_death_area_body_entered"]
