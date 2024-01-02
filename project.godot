@@ -21,7 +21,7 @@ GlobalScript="*res://scripts/global_script.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [input]
 

@@ -10,3 +10,4 @@ res://scripts/ui.gd
 res://scripts/main.gd
 res://scripts/Camera2D.gd
 res://scripts/player.gd
+res://scenes/death_area.tscn
