@@ -7,3 +7,6 @@ res://scenes/ui.tscn
 res://scripts/collectibles.gd
 res://scripts/global_script.gd
 res://scripts/ui.gd
+res://scripts/main.gd
+res://scripts/Camera2D.gd
+res://scripts/player.gd
