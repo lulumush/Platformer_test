@@ -19,10 +19,6 @@ config/icon="res://icon.svg"
 
 GlobalScript="*res://scripts/global_script.gd"
 
-[display]
-
-window/stretch/mode="viewport"
-
 [input]
 
 ui_accept={

@@ -1,3 +1,7 @@
+Button
+VBoxContainer
+Control
+Node2D
 AudioStreamPlayer2D
 AnimatedSprite2D
 Sprite2D
@@ -6,9 +10,5 @@ StaticBody2D
 Timer
 Label
 Camera2D
-Control
 CanvasLayer
-Node2D
 Area2D
-AnimationPlayer
-AnimatableBody2D

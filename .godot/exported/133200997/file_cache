@@ -1,9 +1,9 @@
 res://scenes/collectibles.tscn::bf5038c07bad0a123f14e7da773282db::1704233806::res://.godot/exported/133200997/export-e8d7b6b637eb2cacbf84dc44293b0987-collectibles.scn
-res://scenes/death_area.tscn::6cebe0e2d91d8040c60b19008d52a111::1704235998::res://.godot/exported/133200997/export-4733e4e92ad9836e1a1a2ae794972a11-death_area.scn
+res://scenes/death_area.tscn::6cebe0e2d91d8040c60b19008d52a111::1704236560::res://.godot/exported/133200997/export-4733e4e92ad9836e1a1a2ae794972a11-death_area.scn
 res://scenes/elevator_platform_down.tscn::0da53ea5cb1de45e19f027e01001927b::1704062959::res://.godot/exported/133200997/export-ba6d23f983b59be8cc99703a0e97c978-elevator_platform_down.scn
 res://scenes/elevator_platform_up.tscn::5a7c7df341cbe7b92b47198dbd2de75f::1704062959::res://.godot/exported/133200997/export-801c1bf6e615ae63a3e4da572f88f296-elevator_platform_up.scn
 res://scenes/level_2.tscn::afeae7285a91c16d93f42ea39319f148::1704049057::res://.godot/exported/133200997/export-b9b238992d98ac928d045ce276500b1b-level_2.scn
-res://scenes/main.tscn::189125f0f61d4974a9591cb21887f0ce::1704235998::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/main.tscn::189125f0f61d4974a9591cb21887f0ce::1704236560::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
 res://scenes/next_level_trigger.tscn::81e411e85c4ad59377d6ec04cb4c9b16::1704233806::res://.godot/exported/133200997/export-07df0212d57eb0d86d3db2a419838bdd-next_level_trigger.scn
 res://scenes/player.tscn::e8a66f8d50e5a6ef5e9159b997a0d0c5::1704233806::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
 res://scenes/sliding_platform.tscn::b824d35f80b0bdbcb80d7dcd7bfbbfca::1704222027::res://.godot/exported/133200997/export-47c6418081402b8da8096884ce6590c3-sliding_platform.scn
