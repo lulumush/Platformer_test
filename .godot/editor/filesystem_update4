@@ -1,4 +1,9 @@
+res://scenes/level_2.tscn
 res://scenes/level_1.tscn
 res://scenes/death_area.tscn
 res://scenes/player.tscn
 res://scenes/main.tscn
+res://scripts/Control.gd
+res://scripts/level_1.gd
+res://scenes/end_screen.tscn
+res://scripts/level_2.gd

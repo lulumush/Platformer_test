@@ -1,8 +1,9 @@
-TextureRect
 Button
 VBoxContainer
 Control
+CanvasLayer
 Node2D
+TextureRect
 AudioStreamPlayer2D
 AnimatedSprite2D
 Sprite2D
@@ -11,5 +12,3 @@ StaticBody2D
 Timer
 Label
 Camera2D
-CanvasLayer
-Area2D
