@@ -7,3 +7,7 @@ res://scripts/Control.gd
 res://scripts/level_1.gd
 res://scenes/end_screen.tscn
 res://scripts/level_2.gd
+res://scenes/ui.tscn
+res://scripts/global_script.gd
+res://scenes/collectibles.tscn
+res://scripts/ui.gd
